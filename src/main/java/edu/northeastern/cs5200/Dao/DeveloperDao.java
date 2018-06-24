@@ -72,9 +72,6 @@ public class DeveloperDao {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-			// Person p = new Person("Siru", "Muru", "sir", "mur", "sir@sir.com", new
-			// Date(0));
-			// Developer d = new Developer(1, "123");
 			String sql = "select * from developer, person where person.id = personid;";
 			statement = connection.prepareStatement(sql);
 			rs = statement.executeQuery();
